@@ -36,85 +36,63 @@
         else
             $error = "Missing information";
     }
+
+    
  
 ?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Display</title>
+    <link rel="stylesheet" href="../css/soumettre.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <title>Document</title>
 </head>
-    <body>
-        <button><a href="afficherListeacteur.php">Retour à la liste des acteurs</a></button>
-        <hr>
-        
-        <div id="error">
-            <?php echo $error; ?>
+<body>
+<section class="secone">
+    <nav>
+        <i class="fas fa-theater-masks fa-3x" id="ic"></i>
+        <h2 id="head">theatre24</h2>
+        <div class="nav-links">
+            <ul>
+                <li><i id="ho" class=" fas fa-home"></i><a href="../Views/index.php">Acceuil</a></li>
+                <li><i id="dc" class=" fas fa-file"></i><a href="../Views/suivie.php">suivi</a></li>
+            </ul>
         </div>
-			
-		<?php
-			if (isset($_POST['id_acteur'])){
+    </nav>
+</section>
+
+<section class="secthree">
+    <h1 id="r">modifier votre dossier:</h1>
+    <div class="test-form">
+<h1 id="re">Informations de l'acteur:</h1>
+
+<?php
+			if (isset($_POST['id_acteur'])) 
 				$acteur = $acteurC->recupereracteur($_POST['id_acteur']);
 				
-		?>
-        
-        <form action="" method="POST">
-            <table border="1" align="center">
-                <tr>
-                    <td>
-                        <label for="id_acteur">id acteur:
-                        </label>
-                    </td>
-                    <td><input type="text" name="id_acteur" id="id_acteur" value="<?php echo $acteur['id_acteur']; ?>" maxlength="20"></td>
-                </tr>
-				<tr>
-                    <td>
-                        <label for="nom_acteur">Nom:
-                        </label>
-                    </td>
-                    <td><input type="text" name="nom_acteur" id="nom_acteur" value="<?php echo $acteur['nom_acteur']; ?>" maxlength="20"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="prenom">Prenom:
-                        </label>
-                    </td>
-                    <td><input type="text" name="prenom_acteur" id="prenom_acteur" value="<?php echo $acteur['prenom_acteur']; ?>" maxlength="20"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="adresse_acteur">Adresse acteur:
-                        </label>
-                    </td>
-                    <td>
-                        <input type="text" name="adresse_acteur" value="<?php echo $acteur['adress_acteur']; ?>" id="adresse_acteur">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        categorie:<label for="categorie">
-                        </label>
-                    </td>
-                    <td>
-                        <select size="1" name="categorie" multiple>
-						<option value="comedien">comedien</option>
-						<option value="dramatique">dramatique</option>
-						</select>
-                    </td>
-                </tr>         
-                <tr>
-                    <td></td>
-                    <td>
-                        <input type="submit" value="Modifier"> 
-                    </td>
-                    <td>
-                        <input type="reset" value="Annuler" >
-                    </td>
-                </tr>
-            </table>
-        </form>
-		<?php
-		}
-		?>
-    </body>
+?>
+
+<form action="" method="POST">
+    <label for="id_acteur">id acteur:</label>
+    <input type="text" name="id_acteur" id="id_acteur" value="<?php echo $acteur['id_acteur']; ?>" maxlength="20"><br>
+<label for="nom_acteur">Nom acteur:</label>
+<input type="text" name="nom_acteur" id="nom_acteur" value="<?php echo $acteur['nom_acteur']; ?>" maxlength="20"><br>
+<label for="prenom_acteur"> Prenom:</label>
+<input type="text" name="prenom_acteur" id="prenom_acteur" value="<?php echo $acteur['prenom_acteur']; ?>" maxlength="20"><br>
+<label for="adresse_acteur">adresse:</label>
+<input type="text" name="adresse_acteur" value="<?php echo $acteur['adress_acteur']; ?>" id="adresse_acteur"><br>
+categorie:<label for="categorie">
+</label>
+<select size="1" name="categorie" multiple>
+<option value="comedien">comedien</option>
+<option value="dramatique">dramatique</option>
+</select><br>
+<button type="submit" value="Envoyer">Envoyer</button>
+</form>
+</div>
+</section>
+</body>
 </html>
