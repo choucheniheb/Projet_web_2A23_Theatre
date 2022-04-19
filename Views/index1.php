@@ -41,14 +41,19 @@ Cette plate-forme vous permet de afficher toutes les informations de piece en li
 <div class="row">
 
     <div class="row-class">
-        <h3>PIECE:</h3>
-        <p>Pour consulter les données des pieces,cliquez sur le bouton ci-dessous.</p>
-        <a href="../Views/index2.php" class="hero-btn">Accéder</a>
+        <h3>SOUMETTRE VOTRE DOSSIER:</h3>
+        <p>Pour soumettre une demande de travaille,cliquez sur le bouton ci-dessous.</p>
+        <a href="../Views/ajouteracteur.php" class="hero-btn">Accéder</a>
     </div>
     <div class="row-class">
-        <h3>ACTEUR:</h3>
-        <p>Pour consulter les données des acteurs, cliquez sur le bouton ci-dessous..</p>
-        <a href="../Views/index1.php" class="hero-btn">Accéder</a>
+        <h3>déja deposé:</h3>
+        <p>si vous avez déja deposé votre dossier et tu veux le modifier, cliquez sur le bouton ci-dessous..</p>
+        <a href="../Views/afficherListeacteur.php" class="hero-btn">modifier</a>
+    </div>
+    <div class="row-class">
+        <h3>NOTRE ACTEUR:</h3>
+        <p>Pour afficher l'acteur de notre theatre, cliquez sur le bouton ci-dessous..</p>
+        <a href="../Views/afficherListeacteur.php" class="hero-btn">Accéder</a>
     </div>
     
 </div>

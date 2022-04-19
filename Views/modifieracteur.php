@@ -14,21 +14,24 @@
 		isset($_POST["nom_acteur"]) &&		
         isset($_POST["prenom_acteur"]) &&
 		isset($_POST["adresse_acteur"]) && 
-        isset($_POST["categorie"])
+        isset($_POST["categorie"]) &&
+        isset($_POST["date_naissance"])
     ) {
         if (
             !empty($_POST["id_acteur"]) && 
 			!empty($_POST['nom_acteur']) &&
             !empty($_POST["prenom_acteur"]) && 
 			!empty($_POST["adresse_acteur"]) && 
-            !empty($_POST["categorie"])
+            !empty($_POST["categorie"]) &&
+            !empty($_POST["date_naissance"])
         ) {
             $acteur = new acteur(
                 $_POST['id_acteur'],
 				$_POST['nom_acteur'],
                 $_POST['prenom_acteur'], 
 				$_POST['adresse_acteur'],
-                $_POST['categorie']
+                $_POST['categorie'],
+                $_POST["date_naissance"]
             );
             $acteurC->modifieracteur($acteur,$_POST["id_acteur"]);
             header('Location:afficherListeacteur.php');
@@ -85,6 +88,8 @@
 <label for="adresse_acteur">adresse:</label>
 <input type="text" name="adresse_acteur" value="<?php echo $acteur['adress_acteur']; ?>" id="adresse_acteur"><br>
 categorie:<label for="categorie">
+<label for="date_naissance">date_naissance:</label>
+<input type="date" name="date_naissance" id="date_naissance" value="<?php echo $acteur['date_naissance']; ?>"><br>
 </label>
 <select size="1" name="categorie" multiple>
 <option value="comedien">comedien</option>
