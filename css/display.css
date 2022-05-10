@@ -1,0 +1,64 @@
+
+
+.content{
+    width: 100%;
+    font-size: 0.4em;
+    margin: 25px 0 ;
+}
+
+.content thead tr{
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight:bold;
+    font-size: 20px;
+}
+
+.content th,
+.content td {
+    padding: 12px 15px;
+}
+
+.content tbody tr td{
+    margin: 0;
+    padding: 7px;
+    font-size: 15px;
+}
+
+.fas {
+    padding: 3px;
+   
+}
+#dlt
+{
+    font-size: 17px;
+    border-radius: 1px #c21b17;;
+    color: #c21b17;;
+   
+}
+#ho{color: #c21b17;;
+ height: 10px;
+}
+/*
+.btn{
+
+width: 100px;
+padding: 15px 0;
+text-align: center;
+font-weight: bold;
+border: 2px solid #009688;
+color: solid #009688;
+;
+cursor: pointer;
+transition: 0.5s;
+text-transform: uppercase;
+}
+
+.btn:hover {
+    background: #009688;
+}
+*/
+#dc{
+    color: #009688;;
+}
+
