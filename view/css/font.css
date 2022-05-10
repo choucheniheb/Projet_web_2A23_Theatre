@@ -1,0 +1,45 @@
+.aaa{
+    position: absolute;
+    top: 17%;
+    left: 30%;
+    width: 460px;
+    border: 2px;
+    padding: 40px;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    border-radius: 12px;
+    padding-top: 80px;  
+}
+#file::-webkit-file-upload-button{
+    visibility: hidden;
+}
+
+#file , button{
+    width: 90%;
+    height: 70%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 17px;
+    border: 1px solid #000;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+    transition: .5s all;
+}
+#file{
+    width: 300x;
+    height: 55px;
+    background-color: #FF0000;
+}
+button{
+    width: 300x;
+    height: 55px;
+    padding-top: 10px;
+    padding-left: 20px;
+    background-color: #FF0000;
+}
+#file:hover , button:hover{
+    cursor: pointer;
+    background-color: #4287f5;
+}
